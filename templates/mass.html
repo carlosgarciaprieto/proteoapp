@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block body %}
+<div>
+<br><br>
+<form action="/mass_results" method="POST"> <label>The protein/s sequence/s (if muliple sequences: each sequence comma separated):</label><br>
+<textarea name="input_seq" rows=10 cols=122></textarea> <br><br>
+<input type="radio" name="mass" value="computemass"> <label>Compute monoisotopic mass (Da)</label><br>
+<br>
+<input type="submit" name="submit" value="Run">
+  <p></p><br>
+ </form>
+</div>
+{% endblock %}

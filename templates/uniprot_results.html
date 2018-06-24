@@ -1,0 +1,26 @@
+{% extends "layout.html" %} 
+{% block body %} 
+{% set comma = joiner(",") %}
+<div>
+<p>Your query:</p>
+{% for protein in query_proteins %}
+<p><ul>
+    <li>{{ protein }}</li>
+</ul></p>
+{% endfor %}
+<br>
+<p>Your result/s:</p>
+{% for outputl in output_list %}
+<p><ul>
+    <li>{{ outputl[0] }}</li>
+    <li>{{ outputl[1] }}</li>
+</ul></p>
+{% endfor %}
+{% for out in output %}
+<p>{{ out[0] }} : 
+    {{ comma() }}<a href="{{ out[2] }}">{{ out[1] }}</a> <img src="{{ out[3] }}"></a></p>
+{% endfor %} 
+</div>
+{% endblock %}
+
+

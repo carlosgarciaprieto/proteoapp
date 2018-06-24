@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block body %}
+<div>
+<br><br>
+<form action="/uniprot_results" method="POST"> <label>Your protein name/s or id/s (if muliple proteins: each protein comma separated):</label><br>
+<textarea name="query_proteins" rows=10 cols=122></textarea> <br><br>
+<input type="radio" name="uniprot" value="function"> <label>Protein function</label><br>
+<input type="radio" name="uniprot" value="ontology"> <label>Biological process</label><br>
+<input type="radio" name="uniprot" value="pfam"> <label>Pfam domains</label><br>
+<input type="radio" name="uniprot" value="pdb"> <label>PDB structure</label><br>
+<br>
+<input type="submit" name="submit" value="Run">
+  <p></p><br>
+ </form>
+</div>
+{% endblock %}
